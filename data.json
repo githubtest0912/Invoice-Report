@@ -1,124 +1,124 @@
 {
     "data": [
       {
-        "Invoice ID": "MS00001",
-        "Invoice Amount": 1200,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 2779,
-        "Credits Limit": 25439,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00001",
+        "InvoiceAmount": 1200,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 2779,
+        "CreditsLimit": 25439,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00002",
-        "Invoice Amount": 2310,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 1833,
-        "Credits Limit": 37602,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00002",
+        "InvoiceAmount": 2310,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 1833,
+        "CreditsLimit": 37602,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00003",
-        "Invoice Amount": 3120,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 2444,
-        "Credits Limit": 22850,
-        "Invoice Payment Status": "Unpaid"
+        "InvoiceID": "MS00003",
+        "InvoiceAmount": 3120,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 2444,
+        "CreditsLimit": 22850,
+        "InvoicePaymentStatus": "Unpaid"
       },
       {
-        "Invoice ID": "MS00004",
-        "Invoice Amount": 2312,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 7838,
-        "Credits Limit": 24629,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00004",
+        "InvoiceAmount": 2312,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 7838,
+        "CreditsLimit": 24629,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00005",
-        "Invoice Amount": 1000,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 7624,
-        "Credits Limit": 30585,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00005",
+        "InvoiceAmount": 1000,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 7624,
+        "CreditsLimit": 30585,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00006",
-        "Invoice Amount": 500,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 661,
-        "Credits Limit": 22029,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00006",
+        "InvoiceAmount": 500,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 661,
+        "CreditsLimit": 22029,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00007",
-        "Invoice Amount": 5000,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 3142,
-        "Credits Limit": 31387,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00007",
+        "InvoiceAmount": 5000,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 3142,
+        "CreditsLimit": 31387,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00008",
-        "Invoice Amount": 1230,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 7435,
-        "Credits Limit": 25563,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00008",
+        "InvoiceAmount": 1230,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 7435,
+        "CreditsLimit": 25563,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00009",
-        "Invoice Amount": 3210,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 859,
-        "Credits Limit": 30025,
-        "Invoice Payment Status": "Unpaid"
+        "InvoiceID": "MS00009",
+        "InvoiceAmount": 3210,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 859,
+        "CreditsLimit": 30025,
+        "InvoicePaymentStatus": "Unpaid"
       },
       {
-        "Invoice ID": "MS00010",
-        "Invoice Amount": 2310,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 9330,
-        "Credits Limit": 39231,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00010",
+        "InvoiceAmount": 2310,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 9330,
+        "CreditsLimit": 39231,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00011",
-        "Invoice Amount": 3120,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 9941,
-        "Credits Limit": 37052,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00011",
+        "InvoiceAmount": 3120,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 9941,
+        "CreditsLimit": 37052,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00012",
-        "Invoice Amount": 3120,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 4392,
-        "Credits Limit": 21684,
-        "Invoice Payment Status": "Unpaid"
+        "InvoiceID": "MS00012",
+        "InvoiceAmount": 3120,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 4392,
+        "CreditsLimit": 21684,
+        "InvoicePaymentStatus": "Unpaid"
       },
       {
-        "Invoice ID": "MS00013",
-        "Invoice Amount": 1230,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 8297,
-        "Credits Limit": 34101,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00013",
+        "InvoiceAmount": 1230,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 8297,
+        "CreditsLimit": 34101,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00014",
-        "Invoice Amount": 2130,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 1730,
-        "Credits Limit": 37099,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00014",
+        "InvoiceAmount": 2130,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 1730,
+        "CreditsLimit": 37099,
+        "InvoicePaymentStatus": "Paid"
       },
       {
-        "Invoice ID": "MS00015",
-        "Invoice Amount": 1230,
-        "Billing Period": "2 Jan 2020 - 1 Feb 2020",
-        "Credits Used": 5952,
-        "Credits Limit": 32444,
-        "Invoice Payment Status": "Paid"
+        "InvoiceID": "MS00015",
+        "InvoiceAmount": 1230,
+        "BillingPeriod": "2 Jan 2020 - 1 Feb 2020",
+        "CreditsUsed": 5952,
+        "CreditsLimit": 32444,
+        "InvoicePaymentStatus": "Paid"
       }
     ]
   }
