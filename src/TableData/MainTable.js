@@ -53,8 +53,9 @@ const MainTable = () => {
   const sorting = (col) => {
     if (order === "ASC") {
       const sorted = [...fetchData];
-      //console.log("Asc  : ", sorted);
+    
       sorted.sort((a, b) =>
+      // check whether data is a number or string
         typeof a[col] === "number"
           ? a[col] - b[col]
           : a[col].toLowerCase() > b[col].toLowerCase()
@@ -79,7 +80,7 @@ const MainTable = () => {
     }
   };
 
-  //======================================================
+ 
 
   let API_URL = `http://localhost:3003/data`;
 
