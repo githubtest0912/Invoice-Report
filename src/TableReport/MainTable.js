@@ -1,15 +1,26 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Data from "./components/Data";
 import axios from "axios";
+import Search from "./components/Search";
+import Pagination from "./components/Pagination";
 import "./style/styles.css";
 
-const MainTable = () => {
+export default function App() {
   const [fetchData, updateFetchData] = useState([]);
+
+  // search
+  const [searchTerm, setSearchTerm] = useState("");
+
+  //pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+  const DatasPerPage = 5;
+
+  // sort
+  const [order, setOrder] = useState("ASC");
   // modal
   const [show, setShow] = useState(false);
   const [selectedData, setSelectedData] = useState({});
-   // sort
-   const [order, setOrder] = useState("ASC");
 
   //modal
   const handleClick = (selectedRec) => {
@@ -21,6 +32,59 @@ const MainTable = () => {
     setShow(false);
   };
 
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3003/data`)
+      .then((response) => {
+        updateFetchData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const pageNumbers = [];
+
+  for (let i = 1; i <= Math.ceil(totalPages / DatasPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
+  const InvoiceData = useMemo(() => {
+    let searchData = fetchData;
+
+    if (searchTerm) {
+      searchData = searchData.filter(
+        (item) =>
+          item.InvoiceAmount.toString()
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) ||
+          item.InvoiceID.toString()
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) ||
+          item.InvoicePaymentStatus.toString()
+            .toLowerCase()
+            .startsWith(searchTerm.toLowerCase()) ||
+          item.CreditsUsed.toString()
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) ||
+          item.CreditsLimit.toString()
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase())
+      );
+    }
+
+    setTotalPages(searchData.length);
+
+    //Current Page slice
+    return searchData.slice(
+      (currentPage - 1) * DatasPerPage,
+      (currentPage - 1) * DatasPerPage + DatasPerPage
+    );
+  }, [fetchData, currentPage, searchTerm]);
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  // sort
   //sort
   const sorting = (col) => {
     if (order === "ASC") {
@@ -51,31 +115,27 @@ const MainTable = () => {
     }
   };
 
-  let API_URL = `http://localhost:3003/data`;
-
-  useEffect(() => {
-    axios
-      .get(API_URL)
-      .then((response) => {
-        updateFetchData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [API_URL]);
-
   return (
     <div>
+      <Search
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        setCurrentPage={setCurrentPage}
+      />
       <Data
-        fetchData={fetchData}
+        InvoiceData={InvoiceData}
+        sorting={sorting}
         show={show}
         selectedData={selectedData}
-        handleClick={handleClick}
         hideModal={hideModal}
-        sorting={sorting}
+        handleClick={handleClick}
+      />
+
+      <Pagination
+        pageNumbers={pageNumbers}
+        paginate={paginate}
+        currentPage={currentPage}
       />
     </div>
   );
-};
-
-export default MainTable;
+}

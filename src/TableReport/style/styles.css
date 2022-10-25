@@ -1,3 +1,7 @@
+App {
+  font-family: sans-serif;
+  text-align: center;
+}
 * {
     margin: 0;
     padding: 0;
@@ -69,3 +73,93 @@ td {
     border-radius: 5px;
     cursor: pointer;
   }
+
+  /* // search input */
+
+  .example {
+    padding: 25px;
+  }
+  
+  form.example input[type="text"] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 50%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196f3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* // pagination */
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+  
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .pagination button {
+    width: 40px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: rgb(55, 54, 54);
+    border-color: rgb(248, 169, 169);
+    background-color: #4caf50;
+  }
+  
+  .pagination button.active {
+    font-weight: 900;
+    border-color: #101010;
+    background: #ffe400;
+    color: #101010;
+  }
+  
