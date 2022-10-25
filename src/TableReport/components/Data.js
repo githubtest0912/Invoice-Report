@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from './Modal'
 
-const Data = ({ fetchData,handleClick,show,selectedData,hideModal }) => {
+const Data = ({ fetchData,handleClick,show,selectedData,hideModal,sorting }) => {
   const renderData = () => {
     return (
       fetchData.length > 0 &&
@@ -29,23 +29,23 @@ const Data = ({ fetchData,handleClick,show,selectedData,hideModal }) => {
     <div>
       <table>
         <thead>
-          <tr>
-            <th>
+        <tr>
+            <th onClick={() => sorting("InvoiceID")}>
               <span>Invoice ID</span>
             </th>
-            <th>
+            <th onClick={() => sorting("InvoiceAmount")}>
               <span>Invoice Amount</span>
             </th>
-            <th>
+            <th onClick={() => sorting("BillingPeriod")}>
               <span>Billing Period</span>
             </th>
-            <th>
+            <th onClick={() => sorting("CreditsUsed")}>
               <span>Credits Used</span>
             </th>
-            <th>
+            <th onClick={() => sorting("CreditsLimit")}>
               <span>Credit Limit</span>
             </th>
-            <th>
+            <th onClick={() => sorting("InvoicePaymentStatus")}>
               <span>Invoice Payment Status</span>
             </th>
             <th>Show</th>
