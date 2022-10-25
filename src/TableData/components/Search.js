@@ -11,7 +11,7 @@ const Search = ({searchText,setSearchText,handleChange,handleReset}) => {
       <input
         type="text"
         placeholder="Search.."
-        name="search2"
+        name="search"
         autoComplete="off"
         value={searchText}
         onChange={(e) => handleChange(e.target.value)}
