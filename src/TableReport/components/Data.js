@@ -1,6 +1,7 @@
 import React from "react";
+import Modal from './Modal'
 
-const Data = ({ fetchData }) => {
+const Data = ({ fetchData,handleClick,show,selectedData,hideModal }) => {
   const renderData = () => {
     return (
       fetchData.length > 0 &&
@@ -14,8 +15,10 @@ const Data = ({ fetchData }) => {
             <td>{item.CreditsLimit}</td>
             <td>{item.InvoicePaymentStatus}</td>
             <td>
-              <button className="detailButton">View</button>
-            </td>
+                <button className='detailButton' onClick={() => handleClick(item)}>
+                 View
+                </button>
+              </td>
           </tr>
         );
       })
@@ -50,7 +53,7 @@ const Data = ({ fetchData }) => {
         </thead>
         <tbody>{renderData()}</tbody>
       </table>
-
+      {show && <Modal details={selectedData} handleClose={hideModal} />}
       {fetchData.length === 0 && <span>No records found to display</span>}
     </div>
   );

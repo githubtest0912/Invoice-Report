@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 table {
   border-collapse: collapse;
   margin-top: 10px;
@@ -10,3 +21,51 @@ td {
   border: 2px solid rgb(73, 7, 177);
   padding: 15px;
 }
+
+/* //modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .modal-main {
+    position: fixed;
+    background: white;
+    width: 45%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .display-block {
+    display: block !important;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  .closeButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #b3f8b6;
+    padding: 5px;
+    margin-left: 50%;
+    margin-top: 10px;
+    color: rgb(24, 23, 23);
+    border-radius: 5px;
+  }
+  .detailButton {
+    background-color: #b3d7f8;
+    border: none;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
