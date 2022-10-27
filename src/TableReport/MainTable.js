@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import React,{ useState, useEffect, useMemo } from "react";
 import Data from "./components/Data";
 import axios from "axios";
 import Search from "./components/Search";
@@ -31,17 +31,18 @@ export default function App() {
   const hideModal = () => {
     setShow(false);
   };
-
+  let API = "https://githubtest0912.github.io/Invoice-Report/data.json"
   useEffect(() => {
     axios
-      .get(`https://githubtest0912.github.io/Invoice-Report/data.json`)
+      .get(API)
       .then((response) => {
-        updateFetchData(response.data);
+      
+        updateFetchData(response.data.data);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [API]);
 
   const pageNumbers = [];
 
@@ -51,8 +52,8 @@ export default function App() {
 
   const InvoiceData = useMemo(() => {
     let searchData = fetchData;
-
-    if (searchTerm) {
+    
+    if (searchTerm && searchData != null) {
       searchData = searchData.filter(
         (item) =>
           item.InvoiceAmount.toString()
@@ -72,7 +73,6 @@ export default function App() {
             .includes(searchTerm.toLowerCase())
       );
     }
-
     setTotalPages(searchData.length);
 
     //Current Page slice
@@ -84,12 +84,11 @@ export default function App() {
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // sort
   //sort
   const sorting = (col) => {
     if (order === "ASC") {
       const sorted = [...fetchData];
-      //console.log("Asc  : ", sorted);
+    
       sorted.sort((a, b) =>
         typeof a[col] === "number"
           ? a[col] - b[col]
