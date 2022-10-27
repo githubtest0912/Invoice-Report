@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Invoice-Report/static/css/main.8542ccf4.css",
+    "main.js": "/Invoice-Report/static/js/main.f3349981.js",
+    "index.html": "/Invoice-Report/index.html",
+    "main.8542ccf4.css.map": "/Invoice-Report/static/css/main.8542ccf4.css.map",
+    "main.f3349981.js.map": "/Invoice-Report/static/js/main.f3349981.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8542ccf4.css",
+    "static/js/main.f3349981.js"
+  ]
+}
