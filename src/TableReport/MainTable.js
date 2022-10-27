@@ -34,7 +34,7 @@ export default function App() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3003/data`)
+      .get(`https://githubtest0912.github.io/Invoice-Report/data.json`)
       .then((response) => {
         updateFetchData(response.data);
       })
